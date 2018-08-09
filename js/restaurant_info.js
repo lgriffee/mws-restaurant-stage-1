@@ -4,7 +4,7 @@ var newMap;
 /**
  * Initialize map as soon as the page is loaded.
  */
-document.addEventListener('DOMContentLoaded', (event) => {  
+document.addEventListener('DOMContentLoaded', (event) => {
   initMap();
 });
 
@@ -15,7 +15,7 @@ initMap = () => {
   fetchRestaurantFromURL((error, restaurant) => {
     if (error) { // Got an error!
       console.error(error);
-    } else {      
+    } else {
       self.newMap = L.map('map', {
         center: [restaurant.latlng.lat, restaurant.latlng.lng],
         zoom: 16,
@@ -27,29 +27,29 @@ initMap = () => {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
           '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
           'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        id: 'mapbox.streets'    
+        id: 'mapbox.streets'
       }).addTo(newMap);
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
     }
   });
-}  
- 
-/* window.initMap = () => {
-  fetchRestaurantFromURL((error, restaurant) => {
-    if (error) { // Got an error!
-      console.error(error);
-    } else {
-      self.map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 16,
-        center: restaurant.latlng,
-        scrollwheel: false
-      });
-      fillBreadcrumb();
-      DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
-    }
-  });
-} */
+}
+
+// window.initMap = () => {
+//   fetchRestaurantFromURL((error, restaurant) => {
+//     if (error) { // Got an error!
+//       console.error(error);
+//     } else {
+//       self.map = new google.maps.Map(document.getElementById('detail-map'), {
+//         zoom: 16,
+//         center: restaurant.latlng,
+//         scrollwheel: false
+//       });
+//       fillBreadcrumb();
+//       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
+//     }
+//   });
+// }
 
 /**
  * Get current restaurant from page URL.
@@ -148,19 +148,29 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
   const li = document.createElement('li');
+  const header = document.createElement('div');
+  header.className = 'review-header';
+
   const name = document.createElement('p');
+  name.className = 'review-name';
   name.innerHTML = review.name;
-  li.appendChild(name);
+
+  header.appendChild(name);
 
   const date = document.createElement('p');
+  date.className = 'review-date';
   date.innerHTML = review.date;
-  li.appendChild(date);
+  header.appendChild(date);
+
+  li.appendChild(header);
 
   const rating = document.createElement('p');
+  rating.className = 'review-rating';
   rating.innerHTML = `Rating: ${review.rating}`;
   li.appendChild(rating);
 
   const comments = document.createElement('p');
+  comments.className = 'review-comments';
   comments.innerHTML = review.comments;
   li.appendChild(comments);
 
