@@ -16,18 +16,18 @@
 
 <body id="restaurant-details-page">
   <header>
-    <nav>
+    <nav aria-label="main-nav-bar">
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
 
-    <ul id="breadcrumb" >
+    <ul id="breadcrumb" role="navigation" aria-label="Breadcrumb" >
       <li><a href="/">Home</a></li>
     </ul>
   </header>
 
   <main id="maincontent-restaurant">
     <section id="detail-map-container">
-      <div id="map" class="map detail-map"></div>
+      <div id="map" class="map detail-map" role="application" aria-label="Restaurant location on map"></div>
     </section>
 
     <div id="restaurant-info">
