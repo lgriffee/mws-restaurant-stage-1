@@ -359,7 +359,7 @@ nav h1 a {
 
 #reviews-list li {
 	margin: 0 0 30px;
-	padding: 0;
+	padding: 0 0 15px;
 	position: relative;
 	display: inline-block;
   background-color: #fff;
@@ -404,7 +404,7 @@ nav h1 a {
 }
 
 #reviews-list li p {
-  margin: 10px 20px;
+  margin: 12px 20px;
 }
 
 
