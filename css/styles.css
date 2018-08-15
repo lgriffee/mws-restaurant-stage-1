@@ -315,7 +315,7 @@ nav h1 a {
 
 .restaurant-name{
 	width: 100%;
-  color: #0275d8;
+  color: #01447e;
   font-size: 20pt;
   font-weight: 600;
   letter-spacing: 0;
@@ -406,7 +406,7 @@ nav h1 a {
   text-transform: uppercase;
 	color: #fff;
 	border-radius: 5px;
-	background-color: #0275d8;
+	background-color: #01447e;
 }
 
 .reviews-list li p {
