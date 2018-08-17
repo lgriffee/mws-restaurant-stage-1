@@ -1,6 +1,6 @@
 /*
 *
-* GLOBAL VARIABLES
+* Javascript for index.html page
 *
 */
 
@@ -180,5 +180,4 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     }
     self.markers.push(marker);
   });
-
 }

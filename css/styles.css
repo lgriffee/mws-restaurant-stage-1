@@ -1,6 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
+
 /*
 *
 * BASE STYLES
@@ -106,25 +107,21 @@ nav h1 a {
     font-size: 17px;
 }
 
-/* Display list items side by side */
 .breadcrumb li {
     display: inline;
 }
 
-/* Add a slash symbol (/) before/behind each list item */
 .breadcrumb li+li:before {
     padding: 8px;
     color: black;
     content: "/\00a0";
 }
 
-/* Add a color to all links details-page-wrapper the list */
 .breadcrumb li a {
     color: #0275d8;
     text-decoration: none;
 }
 
-/* Add a color on mouse-over */
 .breadcrumb li a:hover {
     color: #01447e;
     text-decoration: underline;
@@ -144,7 +141,6 @@ nav h1 a {
 
 
 /* ====================== HOMEPAGE ====================== */
-
 
 .home-page {
   background-color: #f3f3f3;
@@ -419,9 +415,10 @@ nav h1 a {
 * Media Queries
 *
 */
+
 @media screen and (min-width: 550px) {
 
-	/* ====================== HOMEPAGE ====================== */
+/* ====================== HOMEPAGE ====================== */
 
 	.restaurants-list {
 		grid-template-columns: repeat(2, 1fr);
@@ -431,7 +428,7 @@ nav h1 a {
 
 @media screen and (min-width: 800px) {
 
-	/* ====================== HOMEPAGE ====================== */
+/* ====================== HOMEPAGE ====================== */
 
 	.restaurants-list {
 		grid-template-columns: repeat(3, 1fr);
@@ -441,7 +438,8 @@ nav h1 a {
 	  height: 35vw;
 	}
 
-	/* ====================== RESTAURANT DETAILS PAGE ====================== */
+
+/* ====================== RESTAURANT DETAILS PAGE ====================== */
 
 	.detail-map-container {
 		order: 2;
@@ -461,7 +459,7 @@ nav h1 a {
 
 @media screen and (min-width: 1200px) {
 
-	/* ====================== HOMEPAGE ====================== */
+/* ====================== HOMEPAGE ====================== */
 
 	.restaurants-list {
 		width: 1140px;

@@ -1,4 +1,8 @@
-const CACHE_NAME = 'restaurant-static-v3';
+/**
+ * Service worker functions
+ */
+
+const CACHE_NAME = 'restaurant-static-v1';
 
 // Install event listener function from https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
 self.addEventListener('install', function(event) {
@@ -44,8 +48,8 @@ self.addEventListener('fetch', function(event) {
         });
         return response;
       });
-    }).catch(function() {
-      return caches.match('/img/1.jpg');
+    }).catch(function(error) {
+      console.log('Fetch failed with ' + error);
     })
   );
 });
